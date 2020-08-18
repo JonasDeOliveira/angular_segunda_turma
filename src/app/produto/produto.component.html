@@ -1,11 +1,13 @@
-<div class="col-12 col-sm-4">
-    <div class="card" style="width: 18rem;">
-        <img class="card-img-top" [src]="produto.img" alt="Card image cap">
-        <div class="card-body">
-            <h5 class="card-title">{{ produto.nome }}</h5>
-            <p class="card-text">{{ produto.descricao }}</p>
-            <button (click)="clicked()" *ngIf="produto.temEsoque" class="btn btn-primary">Comprar</button>
-            <small *ngIf="!produto.temEsoque">Produto esgotado</small>
+<div class="row">
+    <div *ngFor="let produto of produtos" class="col-12 col-sm-4">
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" [src]="produto.img" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{{ produto.nome }}</h5>
+                <p class="card-text">{{ produto.descricao }}</p>
+                <button (click)="clicked()" *ngIf="produto.temEsoque" class="btn btn-primary">Comprar</button>
+                <small *ngIf="!produto.temEsoque">Produto esgotado</small>
+            </div>
         </div>
     </div>
 </div>
