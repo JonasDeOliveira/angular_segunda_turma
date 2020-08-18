@@ -13,6 +13,11 @@ export class ProdutoComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+   
+  }
+
+  clicked():void {
+    console.log("opa! Clicou");  
   }
 
 }
