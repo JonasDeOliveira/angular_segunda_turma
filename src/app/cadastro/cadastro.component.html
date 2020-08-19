@@ -1,3 +1,18 @@
+<h2>Pipes</h2>
+{{pessoa}}<br>
+{{pessoa | json}}<br>
+{{pessoa.nome | uppercase}}<br>
+{{pessoa.nome | lowercase}}<br>
+{{curso.concluido | percent}}<br>
+{{pessoa.nasc | date: 'dd/MM/yyyy'}}<br>
+{{curso.valor | currency: 'BRL': true}}<br>
+{{pessoa.nome | slice: 1:3}}<br>
+{{pessoa | json | uppercase}}
+<br>
+<br>
+<br>
+<br>
+<h2>Formulario</h2>
 {{formCadastro.valid}}
 {{formCadastro.value | json}}
 <form #formCadastro="ngForm">
